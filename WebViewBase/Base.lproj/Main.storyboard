@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="clk-n1-5k9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WebViewBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-wJ-Cuw">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Ehe-vz-zuF"/>
+                                    <barButtonItem systemItem="rewind" id="reL-WT-XNC">
+                                        <connections>
+                                            <action selector="ibRewindTapped:" destination="BYZ-38-t0r" id="GOR-AR-cnc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="5Ky-E7-Xuj"/>
+                                    <barButtonItem systemItem="fastForward" id="cdX-xj-p3V">
+                                        <connections>
+                                            <action selector="ibForwardTapped:" destination="BYZ-38-t0r" id="2iY-K4-ofW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="C8P-wJ-Cuw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="93r-Fy-YUD"/>
+                            <constraint firstItem="C8P-wJ-Cuw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S3X-tP-RO2"/>
+                            <constraint firstItem="C8P-wJ-Cuw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nLC-tC-zBN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="poJ-zy-SfA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="uMw-Pv-79a">
+                            <connections>
+                                <action selector="ibCloseTapped:" destination="BYZ-38-t0r" id="mnU-9t-1oe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ibForwardButton" destination="cdX-xj-p3V" id="aRB-Yr-wGj"/>
+                        <outlet property="ibRewindButton" destination="reL-WT-XNC" id="GLW-Sp-osm"/>
+                        <outlet property="ibToolBar" destination="C8P-wJ-Cuw" id="pCr-V5-aU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="89.732142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nGO-u8-bT1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="clk-n1-5k9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d8s-ZT-hot">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uxs-Ii-ch1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhO-ww-bX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>
